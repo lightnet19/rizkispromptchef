@@ -2,57 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Prompt Chef</title>
+  <title>The Rizki's Prompt Chef</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>👨‍🍳 The Rizki's Prompt Chef</h1>
-    <p>Masak prompt sempurna dengan resep Role, Task, Context, Format</p>
+<div class="container">
+  <h1>👨‍🍳 The Prompt Chef</h1>
+  <p class="subtitle">Masak prompt sempurna dengan resep Role, Task, Context, Format</p>
 
-    <!-- ROLE -->
-    <label>1. Role</label>
-    <select id="role">
-      <option>Mentor Cerdas yang Suka Bercanda</option>
-      <option>Profesor Akademik yang Formal</option>
-      <option>Konsultan Senior yang Tegas</option>
-      <option>Teman Belajar yang Santai</option>
-      <option>Kritikus Objektif</option>
-    </select>
+  <!-- ROLE -->
+  <label>1. Role</label>
+  <select id="role"></select>
 
-    <!-- TASK -->
-    <label>2. Task</label>
-    <textarea id="task" placeholder="Contoh: Jelaskan AI untuk pemula..."></textarea>
+  <!-- TASK -->
+  <label>2. Task</label>
+  <textarea id="task" placeholder="Contoh: Jelaskan AI untuk pemula..."></textarea>
 
-    <!-- CONTEXT -->
-    <label>3. Context / Audience</label>
-    <input id="context" placeholder="Contoh: Mahasiswa semester 1">
+  <!-- CONTEXT -->
+  <label>3. Context / Audience</label>
+  <input id="context" placeholder="Contoh: Mahasiswa semester 1">
 
-    <!-- FORMAT -->
-    <label>4. Output Format</label>
-    <select id="format">
-      <option>Langkah demi langkah</option>
-      <option>Poin-poin (bullet)</option>
-      <option>Esai singkat</option>
-      <option>Tabel perbandingan</option>
-      <option>Dialog imajinatif</option>
-    </select>
+  <!-- FORMAT -->
+  <label>4. Output Format</label>
+  <select id="format"></select>
 
-    <!-- BUTTON -->
-    <button onclick="generatePrompt()">🔥 Racik Prompt</button>
+  <!-- TONE -->
+  <label>5. Tone</label>
+  <select id="tone"></select>
 
-    <!-- OUTPUT -->
-    <h3>Hasil Prompt:</h3>
-    <textarea id="output" readonly></textarea>
+  <!-- BUTTON -->
+  <button class="primary" onclick="generatePrompt()">🔥 Racik Prompt</button>
 
+  <!-- OUTPUT -->
+  <h3>Hasil Prompt</h3>
+  <textarea id="output" readonly></textarea>
+
+  <div class="actions">
     <button onclick="copyPrompt()">📋 Copy</button>
-
+    <button onclick="clearAll()">🧹 Reset</button>
   </div>
-  
-  <script src="presets.js"></script>
-  <script src="storage.js"></script>
-  <script src="app.js"></script>
-  <script src="app.js"></script>
+
+  <!-- HISTORY -->
+  <h3>History</h3>
+  <div id="history"></div>
+
+</div>
+
+<script src="presets.js"></script>
+<script src="storage.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
