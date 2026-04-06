@@ -17,7 +17,6 @@ const PRESETS = {
     "Formal",
     "Santai",
     "Profesional",
-    "Persuasif",
     "Humoris"
   ],
   defaults: {
