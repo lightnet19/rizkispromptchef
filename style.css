@@ -1,22 +1,28 @@
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: #f4f6f8;
 }
 
 .container {
-  max-width: 600px;
-  margin: auto;
+  max-width: 700px;
+  margin: 30px auto;
   background: white;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 12px;
 }
 
 h1 {
   text-align: center;
 }
 
+.subtitle {
+  text-align: center;
+  color: gray;
+  margin-bottom: 20px;
+}
+
 label {
-  margin-top: 10px;
+  margin-top: 15px;
   display: block;
   font-weight: bold;
 }
@@ -25,18 +31,49 @@ textarea, select, input {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  min-height: 80px;
 }
 
 button {
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 10px;
-  width: 100%;
-  background: #007bff;
-  color: white;
   border: none;
   cursor: pointer;
+  border-radius: 6px;
+}
+
+button.primary {
+  background: #007bff;
+  color: white;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
 }
 
 #output {
   height: 200px;
+}
+
+#history {
+  margin-top: 10px;
+}
+
+.history-item {
+  background: #f1f1f1;
+  padding: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.history-item:hover {
+  background: #e0e0e0;
 }
